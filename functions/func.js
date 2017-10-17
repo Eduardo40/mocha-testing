@@ -10,4 +10,8 @@ exports.substract = function(x,y){
     return x-y;
 }
 
+exports.greet = (name) =>{
+    return `${name} says hi!.`;
+}
+
 module.exports = exports;

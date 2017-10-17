@@ -6,9 +6,10 @@ const func = require("../functions/func");
 const addResult = func.add(2,2);
 const substractResult = func.substract(8,4);
 const doubleResult = func.double(4);
+const greetResult = func.greet("Eduardo");
 
 // using chai assert lib
-const assert = require('chai').assert;
+const {assert, expect} = require('chai');
 
 describe("Math functions",function(){
     describe("Add",function(){
@@ -16,7 +17,7 @@ describe("Math functions",function(){
             assert.equal(addResult, 4);
         });
         it("should return a type number", function(){
-            assert.typeOf(addResult,"number")
+            assert.typeOf(addResult,"number");
         });
     });
     
@@ -35,4 +36,16 @@ describe("Math functions",function(){
         })
     });
 
+});
+
+
+describe("Word functions",()=>{
+    describe("greet()",()=>{
+        it("should return a name with greeting",()=>{
+            assert.equal(greetResult,"Eduardo says hi!.");
+        });
+        it("should return a string",()=>{
+            assert.typeOf(greetResult,"string");
+        })
+    })
 });
