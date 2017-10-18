@@ -18,4 +18,12 @@ exports.concat = (word1, word2) =>{
     return word1 + word2;
 }
 
+exports.repeatWord = function (word,numTimes){
+    let result = '';
+    for(let i=0;i<numTimes;i++){
+        result += `${word}\n`;
+    }
+    return result;
+}
+
 module.exports = exports;

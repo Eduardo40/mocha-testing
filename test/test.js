@@ -8,9 +8,10 @@ const substractResult = func.substract(8,4);
 const doubleResult = func.double(4);
 const greetResult = func.greet("Eduardo");
 const concatResult = func.concat('Peter is ','an idiot');
+const repeatWordResult = func.repeatWord('Peter',5);
 
 // using chai assert lib
-const {assert, expect} = require('chai');
+const { assert } = require('chai');
 
 describe("Math functions",function(){
     describe("Add",function(){
@@ -56,6 +57,16 @@ describe("Word functions",()=>{
         });
         it('should return a string', function(){
             assert.typeOf(concatResult,'string');
+        });
+    });
+
+    describe('repeatWord()',function(){
+        it('should repeat a word num of times', function(){
+            const result = repeatWordResult.split('\n').length -1;
+            assert.equal(result,5);
+        });
+        it('should return a string', function(){
+            assert.typeOf(repeatWordResult,'string');
         });
     });
 });
