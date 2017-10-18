@@ -14,4 +14,8 @@ exports.greet = (name) =>{
     return `${name} says hi!.`;
 }
 
+exports.concat = (word1, word2) =>{
+    return word1 + word2;
+}
+
 module.exports = exports;

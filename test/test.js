@@ -7,6 +7,7 @@ const addResult = func.add(2,2);
 const substractResult = func.substract(8,4);
 const doubleResult = func.double(4);
 const greetResult = func.greet("Eduardo");
+const concatResult = func.concat('Peter is ','an idiot');
 
 // using chai assert lib
 const {assert, expect} = require('chai');
@@ -48,4 +49,13 @@ describe("Word functions",()=>{
             assert.typeOf(greetResult,"string");
         })
     })
+
+    describe('concat()', function(){
+        it('should concatinate two words', function(){
+            assert.equal(concatResult,"Peter is an idiot");
+        });
+        it('should return a string', function(){
+            assert.typeOf(concatResult,'string');
+        });
+    });
 });
